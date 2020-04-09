@@ -1,0 +1,25 @@
+version: "3"
+services:
+  xtream-v:
+    build: 
+      context: .
+      args:
+        - SERVER_NAME='Docker Server'
+        - SERVER_DESCRIPTION='Docker Server'
+        - SERVER_PLAYERS=64
+        - SERVER_ANNOUNCE=false
+        - SERVER_TOKEN=''
+        - SERVER_WEBSITE='xtream-v.de'
+        - SERVER_LANGUAGE=GER
+        - SERVER_DEBUG=true
+        - SERVER_STREAMINGDISTANCE=300
+        - SERVER_PASSWORD=''
+        - SSH_KEY=
+        - ALTV_VERSION=release
+        - GIT_LINK=
+        - BRANCH=
+    image: alt-v:latest
+    container_name: alt-v
+    ports:
+      - "7788:7788"
+      - "7788:7788/udp"
